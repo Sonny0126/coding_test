@@ -22,7 +22,7 @@ function solution(scheduels, timelogs, startday) {
 
       let realTime = calcTime(timelogs[i][j]);
 
-      if (realTime < allowTime) {
+      if (realTime > allowTime) {
         isSafe = false;
         break;
       }
