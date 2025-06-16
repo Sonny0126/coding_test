@@ -1,0 +1,29 @@
+1. 
+const fs=require('fs');
+const input=fs.readFileSync('파일 이름).toString().trim()...
+
+2. 
+const fs = require('fs');
+const readline = require('readline');
+
+// `input.txt` 파일을 읽기 위한 인터페이스 생성
+const rl = readline.createInterface({
+  input: fs.createReadStream('input.txt'),
+  output: process.stdout,
+  terminal: false
+});
+
+let input = [];
+
+rl.on('line', (line) => {
+  input.push(line.trim()); // 각 줄을 배열에 저장
+});
+
+rl.on('close', () => {
+  //출력할 내용
+});
+
+백준문제 node.js로 출력 
+input.txt -> /dev/stdin으로 수정
+
+04-19 5문제 업로드 X (블로그에 업로드 할 것)
