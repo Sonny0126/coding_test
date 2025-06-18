@@ -18,7 +18,6 @@ function solution(park, routes) {
     N: [-1, 0],
   };
 
-  let ans = [0, 0];
   // 주어진 이동정보 배열에 담기
   for (const route of routes) {
     const [dir, disStr] = route.split(" ");
