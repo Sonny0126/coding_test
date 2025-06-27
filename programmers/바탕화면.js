@@ -11,9 +11,9 @@ function solution(wallpaper) {
       const rightFile = row.lastIndexOf("#");
 
       top = Math.min(top, i);
-      bottom = Math.max(bottom, i + 1); // 아래쪽 +1 포함
+      bottom = Math.max(bottom, i + 1);
       left = Math.min(left, leftFile);
-      right = Math.max(right, rightFile + 1); // 오른쪽 +1 포함
+      right = Math.max(right, rightFile + 1);
     }
   }
 
