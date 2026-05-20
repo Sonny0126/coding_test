@@ -1,29 +1,29 @@
+import java.util.HashSet;
+
 class Solution {
-    public int solution(int[][] signals) {
+    public int solution(String message, int[][] spoiler_ranges) {
+        int answer = 0;
+        HashSet<String> set = new HashSet<>();
 
-        for (int t = 1; t <= 2000000; t++) {
-
-            boolean ok = true;
-
-            for (int i = 0; i < signals.length; i++) {
-
-                int g = signals[i][0];
-                int y = signals[i][1];
-                int r = signals[i][2];
-
-                int cycle = g + y + r;
-
-                int pos = (t - 1) % cycle + 1;
-
-                if (!(pos > g && pos <= g + y)) {
-                    ok = false;
-                    break;
-                }
+        StringBuilder blinds = new StringBuilder(message);
+        for (int[] range: spoiler_ranges) {
+            for (int i=range[0]; i<=range[1]; ++i) {
+                if (blinds.charAt(i) != ' ')
+                    blinds.setCharAt(i, '*');
             }
-
-            if (ok) return t;
         }
 
-        return -1;
+        for (String word: blinds.toString().split(" ")) {
+            set.add(word);
+        }
+
+        for (String word: message.split(" ")) {
+            if (!set.contains(word)) {
+                ++answer;
+                set.add(word);
+            }
+        }
+
+        return answer;
     }
 }
