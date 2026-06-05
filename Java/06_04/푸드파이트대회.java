@@ -21,8 +21,9 @@ class Solution {
         answer += String.valueOf(i).repeat(num);
       }
 
-      String answer= anwer + "0" + 
+      String reverse = new StringBuilder(answer).reverse().toString(); 
+      String realAns = answer + "0" + reverse;
 
-      return answer;
+      return realAns;
     }
 }
