@@ -14,6 +14,7 @@ class Solution {
         int end = commands[i][1];
         int target = commands[i][2];
 
+        //배열의 일부를 잘라서 새로운 배열로 만들어줌
         int [] temp = Arrays.copyOfRange(array, start-1, end);
         Arrays.sort(temp);
 
