@@ -6,7 +6,8 @@ class Solution {
         Arrays.sort(d);
 
         int count=0;
-        while(budget>=0){
+        
+        while( count < d.length && budget >=d[count]){
           budget-=d[count++];
         }
 
