@@ -24,7 +24,7 @@ class Solution {
               str += copy.charAt(i);
             }
           }
-          //길이를 이진수로 변환
+          //Integer.toBinaryString은 정수를 받아서 2진수 형태의 문자열로 변환
           copy = Integer.toBinaryString(str.length());
           
           //변환횟수 증가
