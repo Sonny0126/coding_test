@@ -1,20 +1,19 @@
 class Solution {
     public int[] solution(int n, long left, long right) {
 
-        // left ~ right까지의 개수만큼만 결과 배열 생성
         int[] answer = new int[(int)(right - left + 1)];
 
-        // answer 배열에 값을 넣기 위한 인덱스
+        // 인덱스
         int idx = 0;
 
-        // left부터 right까지 하나씩 확인
+        //배열 크기가 커져서 long으로 받기
         for (long i = left; i <= right; i++) {
 
-            // 1차원 인덱스를 2차원 배열의 행(row)으로 변환
+            // 1차원 인덱스를 2차원 배열의 행(row)
             //n = 4, i = 6 -> row = 1
             long row = i / n;
 
-            // 1차원 인덱스를 2차원 배열의 열(col)으로 변환
+            // 1차원 인덱스를 2차원 배열의 열(col)
             //n = 4, i = 6 -> col = 2
             long col = i % n;
 
@@ -23,9 +22,8 @@ class Solution {
             // (0,2) -> 3
             // (2,1) -> 3
             // (3,3) -> 4
+            // 마지막 변환시에 long ->Int로
             answer[idx] = (int)(Math.max(row, col) + 1);
-
-            // 다음 answer 위치로 이동
             idx++;
         }
 
