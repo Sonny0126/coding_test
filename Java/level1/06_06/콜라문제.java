@@ -6,17 +6,17 @@ class Solution {
       //빈 병 < a 라면, 빈 병 x
       //빈 병 2개 가져다주면 콜라 1개 받음
 
-      int answer=0;
+      int colaCount=0;
 
       while( n >= a){
         int getCola = (n/a) * b;
         int emptyCola = n % a;
 
-        answer +=getCola;
+        colaCount +=getCola;
         n = getCola + emptyCola;
       }
       
-      return answer;
+      return colaCount;
 
     }
 }

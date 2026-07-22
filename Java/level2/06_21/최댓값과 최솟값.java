@@ -8,13 +8,13 @@ class Solution {
       String [] arr= s.split(" ");
 
       for(String str : arr){
-        int num = Integer.parseInt(str);
+        int num = Integer.parseInt(s);
         max = Math.max(max, num);
         min = Math.min(min, num);
       }
 
       String answer = min + " " + max;
 
-      return answer;
+      return answe;
     }
 }

@@ -8,8 +8,9 @@ class Solution {
 
         for(int i=0; i<b; i++){
           for(int j=0; j<a; j++){
-            System.out.println('*');
+            System.out.print('*');
           }
+          System.out.println();
         }
     }
 }

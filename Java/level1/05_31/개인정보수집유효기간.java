@@ -14,7 +14,7 @@ class Solution {
 
         // 약관 저장
         Map<String, Integer> termMap = new HashMap<>();
-
+        
         for (int i = 0; i < terms.length; i++) {
             String[] temp = terms[i].split(" ");
 

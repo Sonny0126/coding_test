@@ -1,7 +1,8 @@
 class Solution {
-    boolean isPrime(int n){
+
+    boolean isPrime(long n){
       if(n<2) return false;
-      for(int i=2; i*i<=n; i++){
+      for(long i=2; i*i<=n; i++){
         if(n%i==0) return false;
       }
       return true;
@@ -21,7 +22,7 @@ class Solution {
         for(String s: arr){
           if(s.equals("")) continue;
 
-          int num = Integer.parseInt(s);
+          long num = Long.parseLong(s);
 
           if(isPrime(num)) answer++;
         }

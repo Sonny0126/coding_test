@@ -32,7 +32,7 @@ class Solution {
             //skip 문자가 아니면 count 증가
             if(!isSkip) count++;
           }
-          answer[i]=arr;
+          answer+=arr;
         }
 
         return answer;
