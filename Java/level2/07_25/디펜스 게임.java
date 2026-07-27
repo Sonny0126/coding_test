@@ -10,6 +10,8 @@ class Solution {
         //게임에서 무적권 스킬 O, 이 스킬 사용시 병사 소모없이 한 라운드 막을 수 있고, K번만큼 사용
         //무적권을 적절한 시기에 사용해 최대한 많은 라운드 진행
         //라운드 return
+
+        //지나간 라운드 적 수를 내림차순으로 정렬
         PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         for(int i=0; i<enemy.length; i++){
