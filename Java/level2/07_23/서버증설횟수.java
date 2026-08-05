@@ -20,7 +20,7 @@ class Solution {
                 answer += add;
                 // 서버 추가
                 running += add;
-                // k시간 뒤 반납 예정
+                // k시간 뒤 반납 
                 expire[time + k] += add;
             }
         }

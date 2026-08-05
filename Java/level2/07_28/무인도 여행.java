@@ -47,14 +47,14 @@ class Solution {
 
     // 너비 우선 탐색 (BFS)
     public int bfs(int startX, int startY, int n, int m, String[] maps, boolean[][] visited) {
-        Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[]{startX, startY});
+        Queue<int[]> q = new LinkedList<>();
+        q.add(new int[]{startX, startY});
         visited[startX][startY] = true;
 
         int sum = 0;
 
-        while (!queue.isEmpty()) {
-            int[] current = queue.poll();
+        while (!q.isEmpty()) {
+            int[] current = q.poll();
             int x = current[0];
             int y = current[1];
 
@@ -71,7 +71,7 @@ class Solution {
                     // 'X'가 아니며 아직 방문하지 않았다면
                     if (maps[nx].charAt(ny) != 'X' && !visited[nx][ny]) {
                         visited[nx][ny] = true; // 방문 처리
-                        queue.add(new int[]{nx, ny});
+                        q.add(new int[]{nx, ny});
                     }
                 }
             }
