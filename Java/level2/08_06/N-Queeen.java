@@ -8,7 +8,7 @@ class Solution {
 
         if(n<4) return answer;
 
-        int [] q = new int[n];
+        int [] q = new int[n]; //배열로 퀸 위치 기록
         answer = dfs(0, n, q);
 
         return answer;
@@ -23,15 +23,18 @@ class Solution {
         int count =0;
 
         for(int col = 0; col<n; col++){
-          if(isPossible(row, col, queen)){
+          if(check(row, col, queen)){
+            //안전하다면 위치를 기록하고
             queen[row] = col;
+            //dfs를 호출 (횟수는 count++)
             count += dfs(row+1, n, queen);
           }
         }
       return count;
     }
 
-    public boolean isPossible(int row, int col, int[] queen){
+    //퀸을 놓을 수 있는지 확인하는 함수
+    public boolean check(int row, int col, int[] queen){
       for(int x=0; x<row; x++){
         int y = queen[x];
 
