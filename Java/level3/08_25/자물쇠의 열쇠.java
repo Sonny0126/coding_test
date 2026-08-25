@@ -50,6 +50,7 @@ class Solution {
     public boolean check(int[][] board, int M, int N){
       for(int i=0; i<N; i++){
         for(int j=0; j<N; j++){
+          //값이 2이면 돌기+돌기이므로 제외
           if(board[M+i][M+j] != 1){
             return false;
           }
