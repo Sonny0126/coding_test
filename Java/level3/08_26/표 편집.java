@@ -98,7 +98,8 @@ class Solution {
         for (int i = 0; i < n; i++) {
             if (removed[i]) {
                 answer.append('X');
-            } else {
+            } 
+            else {
                 answer.append('O');
             }
         }
