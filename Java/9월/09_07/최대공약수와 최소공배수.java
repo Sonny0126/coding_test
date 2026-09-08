@@ -14,6 +14,5 @@ class Solution {
       int [] arr = {num1, num2}; 
 
       return arr;
-
     }
 }
